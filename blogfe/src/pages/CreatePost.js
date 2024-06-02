@@ -19,7 +19,7 @@ export default function CreatePost(){
       data.set('content', content);
       data.set('file', files[0]);
       
-      fetch('https://blog-1-0bqs.onrender.com/post',{
+      fetch('https://blog-appbe.onrender.com/post',{
         method: 'POST',
         body: data,
       }).then(response => {

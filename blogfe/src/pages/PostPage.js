@@ -6,7 +6,7 @@ export default function PostPage(){
     const [postInfo, setPostInfo] = useState(null)
     const {id} = useParams();
     useEffect(() => {
-        fetch(`https://blog-1-0bqs.onrender.com/post/${id}`)
+        fetch(`https://blog-appbe.onrender.com/post/${id}`)
         .then(response => response.json())
         .then(postInfo => {
             setPostInfo(postInfo);
@@ -34,7 +34,7 @@ export default function PostPage(){
                 </div>
             )}
             <div className="image">
-                <img src={`https://blog-1-0bqs.onrender.com/${postInfo.cover}`} alt=""></img>
+                <img src={`https://blog-appbe.onrender.com/${postInfo.cover}`} alt=""></img>
             </div>
             <div className='content' dangerouslySetInnerHTML={{__html:postInfo.content}}/>
         </div>
